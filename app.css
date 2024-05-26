@@ -52,12 +52,12 @@ body, input{
 }
 .head{
     font-weight: 700;
-    margin: 0 0 10px;
     color: #727f80;
     text-transform: capitalize;
 }
 .input_wrap{
     position: relative;
+    margin: 10px 0 0;
 }
 .input_icon{
     position: absolute;
@@ -85,6 +85,7 @@ body, input{
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+    margin: 10px 0 0;
 }
 .tip{
     text-align: center;
@@ -119,6 +120,13 @@ body, input{
 }
 .custom_tip:hover{
     background-color: #f3f8fa;
+}
+.people_error, .bill_error{
+    display: none;
+    font-size: 11px;
+    top: 18px;
+    left: 40px;
+    color: #E74C3C;
 }
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
