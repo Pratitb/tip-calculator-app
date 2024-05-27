@@ -129,12 +129,10 @@ $(document).ready(function () {
 	}
 
 	function resetApp() {
-		$('.total_amt').html('0.00');
-		$('.tip_amt').html('0.00');
-		$('.bill_amt').html('0.00');
-		$('#people').val('');
+		$('.total_amt, .tip_amt, .bill_amt').html('0.00');
+		$('#people, .custom_tip, #bill').val('');
 		$('.tip').removeClass('tip_selected enable_tip');
-		$('#bill').val('').focus();
+		$('#bill').focus();
 		$('.reset_btn').removeClass('activate_reset_btn');
 	}
 
