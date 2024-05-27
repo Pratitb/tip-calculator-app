@@ -34,17 +34,34 @@ $(document).ready(function () {
 
 	// on tip click
 	$('p.tip').on('click', function () {
+		$('.custom_tip').val('')
 		$('p.tip').removeClass('tip_selected');
 		$(this).addClass('tip_selected');
 		AppVars.tipPercent = $(this).data('number');
-		$('#people').focus().addClass('enable_input');
+		console.log(AppVars.tipPercent, 'tip percent');
+		$('#people').val('').focus().addClass('enable_input');
 		// console.log(AppVars.tipPercent);
 	});
 
 	// on custom tip click
 	$('.custom_tip').on('click', function () {
 		$('p.tip').removeClass('tip_selected');
+		$('#people').addClass('enable_input');
+		AppVars.tipPercent = ''
+		console.log(AppVars.tipPercent, 'tip percent');
 	});
+
+    // on custom tip keyup
+    $('.custom_tip').on('keyup', function(){
+		const customTip = $('.custom_tip').val()
+		if(customTip != ''){
+			AppVars.tipPercent = customTip;
+			console.log(AppVars.tipPercent, 'tip percent');
+		}
+		else{
+			console.log('please select a tip');
+		}
+	})
 
 	// on people keyup
 	$('#people').on('keyup', function () {
