@@ -46,7 +46,7 @@ $(document).ready(function () {
 	// on custom tip click
 	$('.custom_tip').on('click', function () {
 		$('p.tip').removeClass('tip_selected');
-		$('#people').addClass('enable_input');
+		$('#people').addClass('enable_input').val('');
 		AppVars.tipPercent = ''
 		console.log(AppVars.tipPercent, 'tip percent');
 	});
@@ -55,7 +55,7 @@ $(document).ready(function () {
     $('.custom_tip').on('keyup', function(){
 		const customTip = $('.custom_tip').val()
 		if(customTip != ''){
-			AppVars.tipPercent = customTip;
+			AppVars.tipPercent = +customTip;
 			console.log(AppVars.tipPercent, 'tip percent');
 		}
 		else{
