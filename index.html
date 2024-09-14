@@ -1,84 +1,107 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
-<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-<link rel="stylesheet" href="app.css">
-  <title>Tip Calculator</title>
-</head>
-<body>
-  <div class="calc_wrap">
-    <div class="container calc_container">
-      <p class="app_head">splitter</p>
-      <div class="calc_app">
-        <div class="left_col">
-          <!-- bill -->
-          <div class="bill">
-            <p class="head">bill</p>
-            <span class="bill_error">Cannot be less than people</span>
-            <div class="input_wrap">
-              <span class="input_icon">&#8377;</span>
-              <input type="number" name="bill" id="bill"  class="input_box" placeholder="0">
-            </div>
-          </div>
-          <!-- tip -->
-          <div class="tip_wrap">
-            <p class="head">select tip %</p>
-            <div class="pre_defined_tips">
-              <p class="tip" data-number="5">5%</p>
-              <p class="tip" data-number="10">10%</p>
-              <p class="tip" data-number="15">15%</p>
-              <p class="tip" data-number="25">25%</p>
-              <p class="tip" data-number="30">30%</p>
-              <input type="number" name="custom_tip" id="custom_tip" class="tip custom_tip" placeholder="Custom">
-              <!-- <input class="tip custom_tip"></input> -->
-            </div>
-          </div>
-          <!-- divide between -->
-          <div class="bill">
-            <p class="head">number of people</p>
-            <span class="people_error">Cannot be more than bill</span>
-            <div class="input_wrap">
-              <span class="input_icon">&#9817;</span>
-              <input type="number" name="people" id="people" class="input_box people_input" placeholder="0">
-            </div>
-          </div>
-        </div>
-        <div class="right_col">
-          <div class="tip_total_wrap">
-            <div class="tt_wrap">
-              <div class="tip_total_head">
-                <p class="tt_head">bill amount</p>
-                <p class="tt_sub_head">/ person</p>
-              </div>
-              <p class="tt_amt">&#8377;<span class="bill_amt">0.00</span></p>
-            </div>
-            <div class="tt_wrap">
-              <div class="tip_total_head">
-                <p class="tt_head">tip amount</p>
-                <p class="tt_sub_head">/ person</p>
-              </div>
-              <p class="tt_amt">&#8377;<span class="tip_amt">0.00</span></p>
-            </div>
-            <div class="tt_wrap">
-              <div class="tip_total_head">
-                <p class="tt_head">total</p>
-                <p class="tt_sub_head">/ person</p>
-              </div>
-              <p class="tt_amt">&#8377;<span class="total_amt">0.00</span></p>
-            </div>
-          </div>
-          <a class="reset_btn">reset</a>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-  <script src="app.js"></script>
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta
+			http-equiv="Cache-Control"
+			content="no-cache, no-store, must-revalidate" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Overpass:wght@100..900&family=Space+Mono:wght@400;700&display=swap"
+			rel="stylesheet" />
+		<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+		<link rel="stylesheet" href="app.css" />
+		<title>Tip Calculator</title>
+	</head>
+	<body>
+		<div class="calc_wrap">
+			<div class="container calc_container">
+				<p class="app_head">tip calculator</p>
+				<div class="calc_app">
+					<div class="left_col">
+						<!-- bill -->
+						<div class="bill">
+							<p class="head">bill</p>
+							<span class="bill_error">Cannot be less than people</span>
+							<div class="input_wrap">
+								<span class="input_icon">&#8377;</span>
+								<input
+									type="number"
+									name="bill"
+									id="bill"
+									class="input_box"
+									placeholder="0" />
+							</div>
+						</div>
+						<!-- tip -->
+						<div class="tip_wrap">
+							<p class="head">select tip %</p>
+							<div class="pre_defined_tips">
+								<p class="tip" data-number="5">5%</p>
+								<p class="tip" data-number="10">10%</p>
+								<p class="tip" data-number="15">15%</p>
+								<p class="tip" data-number="25">25%</p>
+								<p class="tip" data-number="30">30%</p>
+								<input
+									type="number"
+									name="custom_tip"
+									id="custom_tip"
+									class="tip custom_tip"
+									placeholder="Custom" />
+								<!-- <input class="tip custom_tip"></input> -->
+							</div>
+						</div>
+						<!-- divide between -->
+						<div class="bill">
+							<p class="head">number of people</p>
+							<span class="people_error">Cannot be more than bill</span>
+							<div class="input_wrap">
+								<span class="input_icon">&#9817;</span>
+								<input
+									type="number"
+									name="people"
+									id="people"
+									class="input_box people_input"
+									placeholder="0" />
+							</div>
+						</div>
+					</div>
+					<div class="right_col">
+						<div class="tip_total_wrap">
+							<div class="tt_wrap">
+								<div class="tip_total_head">
+									<p class="tt_head">bill amount</p>
+									<p class="tt_sub_head">/ person</p>
+								</div>
+								<p class="tt_amt">&#8377;<span class="bill_amt">0.00</span></p>
+							</div>
+							<div class="tt_wrap">
+								<div class="tip_total_head">
+									<p class="tt_head">tip amount</p>
+									<p class="tt_sub_head">/ person</p>
+								</div>
+								<p class="tt_amt">&#8377;<span class="tip_amt">0.00</span></p>
+							</div>
+							<div class="tt_wrap">
+								<div class="tip_total_head">
+									<p class="tt_head">total</p>
+									<p class="tt_sub_head">/ person</p>
+								</div>
+								<p class="tt_amt">&#8377;<span class="total_amt">0.00</span></p>
+							</div>
+						</div>
+						<a class="reset_btn">reset</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script
+			src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+			integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"></script>
+		<script src="app.js"></script>
+	</body>
 </html>
