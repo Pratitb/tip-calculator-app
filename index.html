@@ -60,7 +60,7 @@
 							<p class="head">bill</p>
 							<span class="bill_error">Cannot be less than people</span>
 							<div class="input_wrap">
-								<span class="input_icon">&#8377;</span>
+								<span class="input_icon">&#128179;</span>
 								<input
 									type="number"
 									name="bill"
@@ -104,26 +104,37 @@
 					</div>
 					<div class="right_col">
 						<div class="tip_total_wrap">
+							<!-- total head -->
 							<div class="tt_wrap">
 								<div class="tip_total_head">
-									<p class="tt_head">bill amount</p>
-									<p class="tt_sub_head">/ person</p>
+									<p class="tt_head">original bill</p>
+									<!-- <p class="tt_sub_head">/ person</p> -->
 								</div>
-								<p class="tt_amt"><span class="bill_amt">0.00</span></p>
+								<p class="tt_amt bill_amt">0.00</p>
 							</div>
+							<!-- total head -->
 							<div class="tt_wrap">
 								<div class="tip_total_head">
-									<p class="tt_head">tip amount</p>
-									<p class="tt_sub_head">/ person</p>
+									<p class="tt_head">tip added</p>
+									<!-- <p class="tt_sub_head">/ person</p> -->
 								</div>
-								<p class="tt_amt"><span class="tip_amt">0.00</span></p>
+								<p class="tt_amt tip_amt">0.00</p>
 							</div>
+							<!-- total head -->
 							<div class="tt_wrap">
 								<div class="tip_total_head">
-									<p class="tt_head">total</p>
+									<p class="tt_head">final total</p>
+									<!-- <p class="tt_sub_head">/ person</p> -->
+								</div>
+								<p class="tt_amt total_amt">0.00</p>
+							</div>
+							<!-- total head -->
+							<div class="tt_wrap">
+								<div class="tip_total_head">
+									<p class="tt_head">contribution</p>
 									<p class="tt_sub_head">/ person</p>
 								</div>
-								<p class="tt_amt"><span class="total_amt">0.00</span></p>
+								<p class="tt_amt contri_pp">0.00</p>
 							</div>
 						</div>
 						<a class="reset_btn">reset</a>
